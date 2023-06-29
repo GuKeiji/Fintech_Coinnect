@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-home {
+    background-color: #1D2023;
+    height: 10%;    
+}
+
+.header-home img {
+    height: 70%;    
+}
+
+.bg-cards {
+    background-color: #4C191C;
+}
+
+/* TELA LOGIN */
+.bg-my-color {
+    background-color: #1D2023;
+}
+
+.Left_Login {
+    display: flex;
+}
+
+.my-font {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.inputLabel {
+    position: relative;
+    padding-top: 13px;
+}
+
+.inputLabel input {
+    background-color: #1D2023;
+    border: 1px solid lightgrey;
+    color: #FFFFFF;
+    border-radius: 15px;
+    outline: none;
+    min-width: 250px;
+    width: 25vw;
+    height: 52px;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+}
+
+.inputLabel input::placeholder {
+    color: transparent;
+}
+
+.inputLabel label {
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 15px;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    background-color: #1D2023;
+    padding: 5px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.inputLabel input:required:invalid+label {
+    color: red;
+}
+
+.inputLabel input:focus:required:invalid {
+    border: 2px solid red;
+}
+
+.inputLabel input:required:invalid+label:before {
+    content: '*';
+}
+
+.inputLabel input:focus+label,
+.inputLabel input:not(:placeholder-shown)+label {
+    font-size: 13px;
+    top: 0;
+
+}
+
+/* Responsivo */
+@media screen and (max-width: 480px) {
+    .Left_Login {
+        display: none;
+    }
+
+    .Right_Login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+}
